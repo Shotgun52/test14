@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#8B0000" />
+  <title>Valentine's Survival Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app" id="app" aria-live="polite">
+    <!-- Progress -->
+    <header class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <span class="brand__text">Valentine’s Survival Test</span>
+      </div>
+
+      <div class="progress" aria-label="progress">
+        <div class="progress__bar" id="progressBar"></div>
+      </div>
+    </header>
+
+    <!-- Screens -->
+    <section class="screen active" data-screen="welcome">
+      <div class="card hero">
+        <img class="hero__img" id="heroImg" src="hero.png" alt="Valentine cover" />
+        <div class="hero__overlay"></div>
+
+        <div class="hero__content">
+          <h1 class="title">Привіт, мала.</h1>
+          <p class="lead">
+            Сьогодні <strong>14 лютого 2026-го</strong>, і я підготував для тебе дещо особливе.
+            Але спочатку — перевірка. Готова дізнатися свій статус?
+          </p>
+
+          <button class="btn btn--primary" id="startBtn">
+            ПОГНАЛИ! 🚀
+          </button>
+
+          <p class="hint">Порада: можна тапати варіанти або свайпати назад/вперед.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="q1">
+      <div class="card">
+        <h2 class="qtitle">Питання №1</h2>
+        <p class="qtext">Як давно ми знайомі?</p>
+
+        <div class="answers" role="list">
+          <button class="answer" data-q="0" data-a="A">А) Десь пару місяців.</button>
+          <button class="answer" data-q="0" data-a="B">Б) 1.5 роки.</button>
+          <button class="answer" data-q="0" data-a="C">В) 2 роки, 2 тижні і 4 дні.</button>
+        </div>
+
+        <div class="nav">
+          <button class="btn btn--ghost" data-nav="back">Назад</button>
+          <button class="btn btn--primary" data-nav="next">Далі</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="q2">
+      <div class="card">
+        <h2 class="qtitle">Питання №2</h2>
+        <p class="qtext">Як ми зазвичай проводимо час разом?</p>
+
+        <div class="answers" role="list">
+          <button class="answer" data-q="1" data-a="A">А) Потрахушки.</button>
+          <button class="answer" data-q="1" data-a="B">Б) Дивимося щось разом.</button>
+          <button class="answer" data-q="1" data-a="C">В) П'ємо кісель і мівіну.</button>
+          <button class="answer" data-q="1" data-a="D">Г) Все зразу.</button>
+        </div>
+
+        <div class="nav">
+          <button class="btn btn--ghost" data-nav="back">Назад</button>
+          <button class="btn btn--primary" data-nav="next">Далі</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="q3">
+      <div class="card">
+        <h2 class="qtitle">Питання №3</h2>
+        <p class="qtext">Чому ми такі законекчені одне до одного?</p>
+
+        <div class="answers" role="list">
+          <button class="answer" data-q="2" data-a="A">А) Ми цінуємо одне одного.</button>
+          <button class="answer" data-q="2" data-a="B">Б) Ми ділимося секретами.</button>
+          <button class="answer" data-q="2" data-a="C">В) Ми єбануті.</button>
+          <button class="answer" data-q="2" data-a="D">Г) Тігер товстий.</button>
+        </div>
+
+        <div class="nav">
+          <button class="btn btn--ghost" data-nav="back">Назад</button>
+          <button class="btn btn--primary" data-nav="next">Фінал</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="result">
+      <div class="card result">
+        <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+        <h2 class="qtitle">ФІНАЛ</h2>
+        <p class="status" id="statusText">ТВІЙ СТАТУС: ...</p>
+        <p class="subtitle" id="subtitleText"></p>
+
+        <div class="actions">
+          <button class="btn btn--primary" id="shareBtn">Поділитись 💌</button>
+          <button class="btn btn--ghost" id="restartBtn">Пройти ще раз</button>
+        </div>
+
+        <p class="tiny">
+          Якщо “Поділитись” не підтримується — просто зроби скрін 😼
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
